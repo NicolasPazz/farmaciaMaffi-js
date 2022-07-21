@@ -404,3 +404,9 @@ select{
         font-size: 30px;
     }
 }
+
+.animacion:hover{
+    transform: scale(1.14);
+    transition: all 5s;
+    transition-timing-function: ease;
+}
