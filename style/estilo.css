@@ -3,13 +3,14 @@
   margin: 0;
 }
 
+html,
 body {
-  font-family: "Poppins", Helvetica, Arial, Lucida, sans-serif;
+  height: 100%;
 }
 
 .footerimg {
-  width: 12vw;
-  height: 6vw;
+  width: 100%;
+  max-width: 140px;
 }
 
 .backimg, .backimg2 {
@@ -24,52 +25,42 @@ body {
   background-image: url(../images/inicio2.jpg);
 }
 
-.title {
+.title, .subtitle2, .beneficios {
   text-align: center;
-  font-size: 50px;
+  font-size: 2.2rem;
   color: #fff;
-  padding: 1vw;
-  padding-top: 5vw;
-}
-
-.subtitle {
-  text-align: center;
-  font-size: 36px;
-  color: #fff;
-  padding: 40px 0;
+  padding: 1.5rem 1rem;
+  margin: 0;
 }
 
 .firstp {
   text-align: center;
-  font-size: 18px;
+  font-size: 1.125rem;
   color: #fff;
-  margin: 2vw 20vw;
+  padding: 1em 20%;
+  margin: 0;
 }
 
 .button {
   color: #fff;
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: 600;
   font-family: "Open Sans", Helvetica, Arial, Lucida, sans-serif;
   background-color: rgb(0, 122, 121);
   border-radius: 100px;
-  padding: 10px 20px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  padding: 0.7em 1em;
+  box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.3);
 }
 
 .button2 {
-  margin: 2.8vw 0;
+  margin: 1.4em 0.5em 2.5rem 0.5em;
 }
 
 .logo {
-  width: 100px;
-  height: 50px;
-  margin-top: -15px;
-  padding-right: 25vw;
+  width: 60%;
 }
 
 header {
-  padding: 10px 16px;
   background-color: #fff;
   position: fixed;
   width: 100%;
@@ -77,7 +68,7 @@ header {
   border-bottom-style: solid;
   border-bottom-width: 1px;
   font-weight: 600;
-  top: 19px;
+  min-height: 12vh;
 }
 
 nav ul {
@@ -88,6 +79,11 @@ nav ul {
 nav ul li {
   list-style-type: none;
   font-size: 14px;
+}
+
+.principal {
+  color: rgb(0, 122, 121);
+  text-align: right;
 }
 
 li {
@@ -101,66 +97,73 @@ a {
 }
 
 footer {
-  padding: 20px 20px 10px 20px;
   background-color: rgb(0, 122, 121);
   font-weight: 600;
   border-top-color: rgba(51, 51, 51, 0.1);
   border-top-style: solid;
   border-top-width: 1px;
   color: #fff;
+  min-height: 15vh;
 }
 
 .icon {
   width: 2.3vw;
   height: 2.3vw;
   margin: 0.6vw;
+  min-width: 19px;
+  min-height: 19px;
 }
 
 .mailicon {
   width: 2.4vw;
   height: 2.4vw;
-  margin: 0.7vw 0.3vw 0.75vw 0.6vw;
+  margin: 0.6vw;
+  min-width: 19px;
+  min-height: 19px;
 }
 
 .servicios-icon {
-  width: 25px;
-  height: 25px;
-  margin: 10px;
-}
-
-.pad {
-  padding: 10px 0;
-}
-
-h3 {
-  padding: 10px 0;
+  width: 1.3em;
+  height: 1.3em;
+  margin: 0 0.5em 0 0;
+  min-width: 19px;
+  min-height: 19px;
 }
 
 main {
-  padding: 70px 0 50px 0;
+  padding: 12vh 0 0 0;
+  min-height: 85vh;
 }
 
 .margin {
   margin: 0 18vw;
 }
 
-h2 {
+h2, h3 {
   text-align: center;
-  padding: 20px 0px;
+  margin: 0;
+  font-size: 1.5rem;
 }
 
 p {
   text-align: center;
 }
 
+.parrafoserv {
+  margin: 0;
+  font-size: 1.125rem;
+  padding: 1rem;
+}
+
 .servicios {
-  padding: 25px;
+  padding: 2.5%;
   border-radius: 15px;
   border-color: rgba(51, 51, 51, 0.1);
   border-width: 1px;
   border-style: solid;
-  width: 300px;
-  margin: 25px 20px;
+  min-width: 150px;
+  max-width: 30%;
+  margin: 4% 1%;
 }
 
 iframe {
@@ -171,8 +174,14 @@ iframe {
   width: 100%;
 }
 
-.centrado {
+.centradox {
   text-align: center;
+}
+
+.centradoy {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 label {
@@ -194,70 +203,67 @@ select {
   margin: 5px 0 10px 0;
 }
 
-.serviciosflex {
+.serviciosflex, .serviciosflex2 {
   display: flex;
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
+  align-items: center;
 }
 
-.parrafo {
-  padding: 0px 25px 10px 25px;
+.serviciosflex2 {
+  align-items: initial;
+  padding: 2%;
 }
 
-.margintop {
-  margin-top: 10px;
-  margin-right: -5px;
+.pcontacto, .form {
+  text-align: left;
+  font-size: 1.125rem;
+  color: black;
+  margin: 5% 30%;
 }
 
-.margintop2 {
-  margin-top: 10px;
-  margin-right: -10px;
-}
-
-.padcontacto {
-  padding: 20px 300px;
-}
-
-.padcontacto2 {
-  padding: 60px 0 20px 0;
+.pcontacto2 {
+  font-size: 1.5rem;
+  color: black;
 }
 
 .footertext {
   color: #fff;
-  padding: 1vw 0.75vw 0.75vw 0.3vw;
-  font-weight: 500;
-  font-size: 1.2vw;
+  padding: 0 0.75vw 0 0.3vw;
+  font-weight: 600;
+  font-size: 0.8rem;
+  text-overflow: ellipsis;
 }
 
 .footertext2 {
   color: #fff;
-  padding: 0px 0.75vw;
-  font-size: 1.5vw;
+  padding: 0px 0.75vw 0.8em 0vw;
+  font-size: 1rem;
+}
+
+input, select, textarea {
+  max-width: 90%;
 }
 
 .contactotext {
   color: black;
-  padding: 13px 10px 10px 4px;
+  font-size: 1.125rem;
 }
 
-.flex {
+.flex, .flex6 {
   display: flex;
-  flex-direction: row;
   justify-content: space-around;
-  flex-wrap: nowrap;
 }
 
 .flex5 {
   display: flex;
-  flex-direction: row;
   justify-content: left;
   flex-wrap: wrap;
 }
 
 .flexcontacto {
   display: flex;
-  flex-direction: row;
   justify-content: space-around;
   flex-wrap: nowrap;
   background-color: black;
@@ -270,14 +276,17 @@ select {
   justify-content: left;
   width: auto;
   align-items: flex-start;
+  overflow: hidden;
 }
 
 .flex4 {
   display: flex;
   flex-wrap: wrap;
   justify-content: left;
-  width: auto;
-  align-items: flex-start;
+  width: 100%;
+  align-items: center;
+  margin: 0;
+  padding: 0;
 }
 
 .flex3 {
@@ -285,42 +294,56 @@ select {
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: left;
+  align-items: center;
 }
 
 .flexwidth2 {
   width: 50%;
+  padding: 2em;
 }
 
 .flexwidth {
-  width: 20%;
+  width: 25%;
+  padding: 2em;
 }
 
-.flexwidth3 {
-  width: 50vw;
-}
-
-.maintext {
+.maintext, .maintext2 {
   text-align: left;
   color: #fff;
-  font-size: 16px;
-  padding: 0 19vw 40px 19vw;
+  font-size: 1.125rem;
+  padding: 0rem 19% 1.5rem 19%;
+  margin: 0;
 }
 
-.subtitle2 {
+.maintext2 {
+  color: black;
+}
+
+.flex6 {
+  padding: 0;
+  margin: 4%;
+  margin-bottom: 8%;
+  flex-wrap: wrap;
+}
+
+.subtitle2, .beneficios {
   text-align: left;
-  font-size: 36px;
-  color: #fff;
-  padding: 40px 0 20px 19vw;
+  padding: 1.5rem 19%;
 }
 
 .beneficios {
-  padding: 40px 0 20px 0;
-  font-size: 24px;
+  font-size: 2rem;
+  color: black;
+  padding-top: 2.5rem;
 }
 
-.centradoform {
-  margin: 0 auto;
-  margin-top: 20px;
+.form {
+  margin: 4% 30%;
+  padding: 2.5%;
+  border-radius: 15px;
+  border-color: rgba(51, 51, 51, 0.1);
+  border-width: 1px;
+  border-style: solid;
 }
 
 .zoom:hover {
@@ -350,41 +373,36 @@ select {
     width: 40vw;
     height: 40vw;
   }
-  .logo {
-    padding-right: 15vw;
-  }
-  .button {
-    font-size: 16px;
-    padding: 10px 20px;
-  }
-  .button2 {
-    margin: 4vw 0 2vw 0;
-  }
-  .video {
+  .centradoy .video {
     height: 40.95vw;
     width: 72.8vw;
   }
+  .logo {
+    width: 80%;
+  }
+  .footermedia {
+    display: none;
+  }
+  .flexwidth,
+.flexwidth2 {
+    width: 50%;
+  }
+  h2 {
+    font-size: 1.2rem;
+  }
+  .parrafoserv {
+    font-size: 1rem;
+  }
+  .servicios {
+    padding: 2% 1% 1% 1%;
+  }
 }
 @media (max-width: 600px) {
-  .logo {
-    width: 14vw;
-    height: 7vw;
-  }
   a {
     font-size: 2vw;
   }
-  .title {
-    font-size: 40px;
-  }
-  .firstp {
-    font-size: 14px;
-  }
-  .button {
-    font-size: 14px;
-    padding: 10px 20px;
-  }
-  .button2 {
-    margin: 5vw 0 2vw 0;
+  .logo {
+    display: none;
   }
 }
 @media (max-width: 480px) {
@@ -395,15 +413,28 @@ select {
     width: 70vw;
     height: 70vw;
   }
-  .title {
-    font-size: 32px;
-  }
-  .subtitle2 {
-    font-size: 30px;
+  textarea {
+    max-width: 80px;
   }
 }
-.animacion:hover {
-  transform: scale(1.14);
-  transition: all 5s;
-  transition-timing-function: ease;
+@media (min-width: 992px) {
+  header {
+    height: 12vh;
+  }
+}
+@media (max-width: 668px) {
+  h2 {
+    font-size: 1rem;
+  }
+  .parrafoserv {
+    font-size: 0.8rem;
+  }
+  .servicios-icon {
+    width: 1em;
+    height: 1em;
+    margin-right: 0.2em;
+  }
+}
+main {
+  font-family: "Poppins", Helvetica, Arial, Lucida, sans-serif;
 }/*# sourceMappingURL=estilo.css.map */

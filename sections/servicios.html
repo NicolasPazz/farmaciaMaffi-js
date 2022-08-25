@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style/estilo.css">
     <link rel="shortcut icon" href="../images/favicon-16x16.png" type="image/x-icon">
     <title>Servicios | Farmacia Maffi</title>
     <meta name="description" content="Conoce los servicios que ofrecemos. Cosmetología farmacéutica, preparados magistrales y flores de Bach.">
@@ -18,121 +17,130 @@
     <meta property="og:type" content="place">
     <meta property="og:image" content="../images/LOGO.jpg"> 
     <meta property="og:locale" content="es_Es">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="../style/estilo.css">
 </head>
 
 <body>
     <header>
-        <nav>
-            <ul class="nav">
-                <li>
-                    <a href="../index.html"><img class="logo" src="../images/LOGO.png" loading="lazy" alt="Logo Farmacia Maffi"></a>
-                </li>
-                <li>
-                    <a href="./servicios.html">Servicios</a>
-                </li>
-                <li>
-                    <a href="./laboratorio.html">Laboratorio</a>
-                </li>
-                <li>
-                    <a href="./floresDeBach.html">Flores de Bach</a>
-                </li>
-                <li>
-                    <a href="./contacto.html">Contacto</a>
-                </li>
-            </ul>
+        <nav class="navbar navbar-expand-lg" style="margin: 0 5%;height: 100%;">
+            <div class="container-fluid" style="height: 100%;">
+                <a class="navbar-brand" href="../index.html" style="width: 13%;"><img class="logo"
+                        src="../images/LOGO.png" loading="lazy" alt="Logo Farmacia Maffi"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" style="justify-content: right;" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-link principal" href="./servicios.html">Servicios</a>
+                        <a class="nav-link principal" href="./laboratorio.html">Laboratorio</a>
+                        <a class="nav-link principal" href="./floresDeBach.html">Flores de Bach</a>
+                        <a class="nav-link principal" href="./contacto.html">Contacto</a>
+                    </div>
+                </div>
+            </div>
         </nav>
     </header>
     <main>
         <div class="backimg2">
-            <h2 class="subtitle">¿Qué servicios brindamos?</h2>
+            <h2 class="title">¿Qué servicios brindamos?</h2>
         </div>
-        <section class="serviciosflex">
+        <section class="serviciosflex2">
             <div class="servicios">
                 <div class="serviciosflex">
-                    <div class="margintop">
+                    <div class="centradoy">
                         <img class="servicios-icon" src="../images/lotion.png" loading="lazy" alt="Productos de cosmética farmacéutica">
                     </div>
-                    <h2>Cosmetología</h2>
+                    <h2 class="centradoy">Cosmetología</h2>
                 </div>
-                <div class="parrafo">
+                <div class="parrafoserv">
                     <p>Trabajamos con cosmetólogas y cosmiatras certificados, brindando un servicio personalizado de limpieza facial con productos de cosmética elaborados en nuestro laboratorio especializado.</p>
                 </div>
             </div>
             <div class="servicios">
                 <div class="serviciosflex">
-                    <div class="margintop">
+                    <div class="centradoy">
                         <img class="servicios-icon" src="../images/cientifico.png" loading="lazy" alt="Preparación de recetas magistrales">
                     </div>
-                    <h2>Magistrales</h2>
+                    <h2 class="centradoy">Magistrales</h2>
                 </div>
-                <div class="parrafo">
+                <div class="parrafoserv">
                     <p>Nuestros farmacéuticos podrán realizar tus preparados magistrales con productos de primera calidad de acuerdo a tus necesidades.</p>
                 </div>
             </div>
             <div class="servicios">
                 <div class="serviciosflex">
-                    <div class="margintop2">
+                    <div class="centradoy">
                         <img class="servicios-icon" src="../images/flores-de-bach.png" loading="lazy" alt="Flores de Bach">
                     </div>
-                    <h2>Flores de Bach</h2>
+                    <h2 class="centradoy">Flores de Bach</h2>
                 </div>
-                <div class="parrafo">
+                <div class="parrafoserv">
                     <p>A través de un cuestionario, prepararemos tus flores de bach en nuestro laboratorio, para tratar sentimientos como miedos, soledad, desesperación, estrés, depresión y obsesiones.</p>
                 </div>
             </div>
         </section>
     </main>
     <footer class="flex">
-        <div class="flex2 flexwidth">
+        <div class="flexwidth footermedia">
             <img class="footerimg" src="../images/LOGOBLANCO.png" loading="lazy" alt="Logo Farmacia Maffi">
         </div>
         <div class="flex2 flexwidth2">
             <h3 class="footertext2">CONTACTO</h3>
-            <ul class="flex">
-                <li>
+            <ul class="flex4">
+                <li class="centradoy">
                     <a href="https://www.instagram.com/farmaciamaffi/?hl=es" target="_blank"><img class="icon"
-                            src="https://cdn.cdnlogo.com/logos/i/92/instagram.svg" loading="lazy" alt="Logo Instagram"></a>
+                            src="https://cdn.cdnlogo.com/logos/i/92/instagram.svg" loading="lazy"
+                            alt="Logo Instagram"></a>
                 </li>
-                <li>
+                <li class="centradoy">
                     <a href="http://walink.co/55300a" target="_blank"><img class="icon"
-                            src="https://cdn.cdnlogo.com/logos/w/29/whatsapp-icon.svg" loading="lazy" alt="Logo Whatsapp"></a>
+                            src="https://cdn.cdnlogo.com/logos/w/29/whatsapp-icon.svg" loading="lazy"
+                            alt="Logo Whatsapp"></a>
                 </li>
                 <li>
                     <a class="flex3" href="tel:01142765210">
                         <div>
                             <img class="mailicon" src="https://img.icons8.com/ios-glyphs/30/FFFFFF/phone--v1.png"
-                            loading="lazy" alt="Teléfono">
+                                loading="lazy" alt="Teléfono">
                         </div>
-                        <div class="pad footertext">
-                            (011) 4276-5210
+                        <div class="footertext centradoy">
+                            <p style="margin: 0;">(011) 4276-5210</p>
                         </div>
                     </a>
                 </li>
                 <li>
                     <a class="flex3" href="mailto:carinamaffi@yahoo.com.ar">
                         <div>
-                            <img class="mailicon" src="https://img.icons8.com/material/24/FFFFFF/mail.png" loading="lazy" alt="Email">
+                            <img class="mailicon" src="https://img.icons8.com/material/24/FFFFFF/mail.png"
+                                loading="lazy" alt="Email">
                         </div>
-                        <div class="pad footertext">
-                            carinamaffi@yahoo.com.ar
+                        <div class="footertext centradoy">
+                            <p style="margin: 0;">carinamaffi@yahoo.com.ar</p>
                         </div>
                     </a>
                 </li>
             </ul>
         </div>
-        <div class="flex2">
+        <div class="flex2 flexwidth">
             <h3 class="footertext2">VISITANOS</h3>
             <a class="flex3" href="https://goo.gl/maps/74q93hd4as3JAkZg8" target="_blank">
-                <div>
+                <div style="height: 100%;">
                     <img class="mailicon" src="https://img.icons8.com/material-outlined/24/FFFFFF/marker.png"
-                    loading="lazy" alt="Ubicación">
+                        loading="lazy" alt="Ubicación">
                 </div>
-                <div class="pad footertext">
+                <div class="footertext">
                     Av. Rosales 1724 - R. de Escalada, Lanús
                 </div>
             </a>
         </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous">
+    </script>
 </body>
 
 </html>
