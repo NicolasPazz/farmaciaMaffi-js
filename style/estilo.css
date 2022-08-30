@@ -228,7 +228,11 @@ input {
 }
 
 .input2 {
-  width: 5em;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 1rem;
+  padding: 0.1em 0.9em;
 }
 
 .input3 {
