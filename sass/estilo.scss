@@ -63,7 +63,7 @@ body {
 }
 
 .logo {
-    width: 60%;
+    width: 15vh;
 }
 
 header {
@@ -445,10 +445,6 @@ textarea {
         width: 72.8vw;
     }
 
-    .logo {
-        width: 80%;
-    }
-
     .footermedia {
         display: none;
     }
@@ -479,10 +475,6 @@ textarea {
 @media (max-width: 600px) {
     a {
         font-size: 2vw;
-    }
-
-    .logo {
-        display: none;
     }
 
 }
