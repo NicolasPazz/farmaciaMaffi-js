@@ -74,6 +74,9 @@ header {
   min-height: 12vh;
 }
 
+nav {
+  min-height: 12vh;
+}
 nav ul {
   display: flex;
   justify-content: space-evenly;
@@ -389,6 +392,8 @@ textarea {
 }
 
 .logowpp {
+  display: flex;
+  justify-content: center;
   position: fixed;
   bottom: 100px;
   right: 30px;
