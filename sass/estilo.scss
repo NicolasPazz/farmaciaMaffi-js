@@ -21,11 +21,14 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center center;
-    text-align: center
+    text-align: center;
+    display: flex;
+    align-items: center
 }
 
 .backimg2 {
     @extend .backimg;
+    display: block;
     background-image: url(../images/inicio2.jpg);
 }
 
@@ -42,7 +45,7 @@ body {
     text-align: center;
     font-size: 1.125rem;
     color: #fff;
-    padding: 1em 20%;
+    padding: 1em 20% 0 20%;
     margin: 0;
 }
 
@@ -79,26 +82,21 @@ header {
 
 nav {
     min-height: 12vh;
-    ul {
-        display: flex;
-        justify-content: space-evenly;
-        margin: 0 20px;
+}
 
-        li {
-            list-style-type: none;
-            font-size: 14px;
-        }
-    }
+.nav {
+    margin: 0 5%;
+    height: 100%;
 }
 
 .principal {
-    color: rgb(0, 122, 121);
+    color: $colorPrincipal;
     text-align: right;
 }
 
 li {
     list-style-type: none;
-    font-size: 14px;
+    font-size: 0.875rem;
 }
 
 a {
@@ -163,7 +161,7 @@ h3 {
 
 p {
     text-align: center;
-    color: #4a4a4a;
+    color: $textoOscuro;
     font-weight: 500;
 }
 
@@ -205,9 +203,9 @@ iframe {
 }
 
 label {
-    padding: 0 1em 0.5em 0;
+    padding: 0 1em 0.25em 0;
     margin: 0;
-    color: #4a4a4a;
+    color: $textoOscuro;
 }
 
 textarea,
@@ -215,10 +213,10 @@ input,
 select {
     padding: 1px 3px;
     margin: 0 0 1em 0;
-    color: #4a4a4a;
+    color: $textoOscuro;
 }
 
-.checkboxdiv{
+.checkboxdiv {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -253,7 +251,7 @@ textarea {
     flex-wrap: wrap;
     align-items: center;
     padding: 1em 1em 0 1em;
-    color: #4a4a4a
+    color: $textoOscuro;
 }
 
 .serviciosflex2 {
@@ -265,13 +263,18 @@ textarea {
 .pcontacto {
     text-align: left;
     font-size: 1.125rem;
-    color: #4a4a4a;
+    color: $textoOscuro;
     margin: 5% 30%;
 }
 
 .pcontacto2 {
     font-size: 1.5rem;
-    color: #4a4a4a;
+    color: $textoOscuro;
+}
+
+.pcontacto3 {
+    @extend .pcontacto2;
+    padding-top: 4%;
 }
 
 .footertext {
@@ -284,13 +287,13 @@ textarea {
 
 .footertext2 {
     color: #fff;
-    padding: 0px 0.75vw 0.8em 0.6vw;
+    padding: 0 0.75vw 0.8em 0.6vw;
     font-size: 1rem;
     font-weight: 600;
 }
 
 .contactotext {
-    color: #4a4a4a;
+    color: $textoOscuro;
     font-size: 1.125rem;
 }
 
@@ -309,7 +312,7 @@ textarea {
     display: flex;
     justify-content: space-around;
     flex-wrap: nowrap;
-    background-color: #4a4a4a;
+    background-color: $textoOscuro;
 }
 
 .flex2 {
@@ -341,13 +344,13 @@ textarea {
 }
 
 .flexwidth2 {
-    width: 50%;
-    padding: 2em;
+    width: auto;
+    padding: 1.5em 4%;
 }
 
 .flexwidth {
     width: 25%;
-    padding: 2em;
+    padding: 1.5em 4%;
 }
 
 .maintext {
@@ -360,7 +363,7 @@ textarea {
 
 .maintext2 {
     @extend .maintext;
-    color: #4a4a4a
+    color: $textoOscuro;
 }
 
 .flex6 {
@@ -380,7 +383,7 @@ textarea {
 .beneficios {
     @extend .subtitle2;
     font-size: 2rem;
-    color: #4a4a4a;
+    color: $textoOscuro;
     padding-top: 2.5rem;
 }
 
@@ -394,7 +397,7 @@ textarea {
     border-style: solid;
 }
 
-.zoom{
+.zoom {
     transition: all 0.5s ease-out 0s;
 }
 
@@ -502,10 +505,6 @@ textarea {
     }
 }
 
-/*.servicios {
-    min-width: 200px;
-}*/
-
 @media (min-width: 992px) {
     header {
         height: 12vh;
@@ -526,6 +525,84 @@ main {
     font-family: "Poppins", Helvetica, Arial, Lucida, sans-serif;
 }
 
-a:hover{
+a:hover {
     color: white;
+}
+
+.container-fluid {
+    height: 100%;
+}
+
+#navbarNavAltMarkup {
+    justify-content: right;
+}
+
+.sectiondescrip {
+    padding: 0 0 2rem 0;
+}
+
+.principaltitle {
+    @extend .title;
+    font-size: 3.125rem;
+}
+
+.nomargin {
+    margin: 0;
+}
+
+.footertext3 {
+    @extend .footertext2;
+    padding-left: 1vw;
+}
+
+.div-location {
+    height: 100%;
+}
+
+.div-video {
+    margin-bottom: 5%;
+}
+
+.h3-contact {
+    padding-bottom: 1.2em;
+    text-align: left;
+    color: $textoOscuro;
+}
+
+.p-contact {
+    text-align: left;
+}
+
+.form-inputtext {
+    font-size: 0.8rem;
+}
+
+.div-buttons {
+    text-align: center;
+    margin-top: 1.5em;
+}
+
+.section-contact {
+    margin: 4%;
+}
+
+.margincontact {
+    margin: 2%;
+}
+
+@media (max-width: 360px) {
+    .logowpp {
+        display: none;
+    }
+}
+
+.title-contact {
+    @extend .title;
+    padding: 1.5rem 30%;
+}
+
+@media (max-width: 999px) {
+    .flexwidth2 {
+        width: min-content;
+    }
 }

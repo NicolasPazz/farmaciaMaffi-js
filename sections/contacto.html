@@ -24,16 +24,16 @@
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg" style="margin: 0 5%;height: 100%;">
-            <div class="container-fluid" style="height: 100%;">
-                <a class="navbar-brand" href="../index.html" style="width: 13%;"><img class="logo"
-                        src="../images/LOGO.png" loading="lazy" alt="Logo Farmacia Maffi"></a>
+        <nav class="navbar navbar-expand-lg nav">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="../index.html"><img class="logo" src="../images/LOGO.png" loading="lazy"
+                        alt="Logo Farmacia Maffi"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
                     aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" style="justify-content: right;" id="navbarNavAltMarkup">
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
                         <a class="nav-link principal" href="./servicios.html">Servicios</a>
                         <a class="nav-link principal" href="./laboratorio.html">Laboratorio</a>
@@ -46,49 +46,50 @@
     </header>
     <main>
         <div class="backimg2">
-            <h2 class="title">Contacto</h2>
+            <h2 class="title-contact">Contacto</h2>
         </div>
         <section class="pcontacto">
-            <h3 style="padding-bottom: 1.2em;text-align: left;color: #4a4a4a;">Horarios de Atención:</h3>
-            <p style="text-align: left;">Lunes a Viernes 8:30-13:00hs y 16:00-20:00hs</p>
-            <p style="text-align: left;">Sábados 9:00-13:00hs</p>
+            <h3 class="h3-contact">Horarios de Atención:</h3>
+            <p class="p-contact">Lunes a Viernes 8:30-13:00hs y 16:00-20:00hs</p>
+            <p class="p-contact">Sábados 9:00-13:00hs</p>
         </section>
         <article class="form">
             <form>
                 <div>
                     <label for="nombre">Nombre</label>
-                    <input type="text" name="nombre" placeholder="Nombre" style="font-size: 0.8rem;" />
+                    <input type="text" id="nombre" name="Nombre" placeholder="Nombre" class="form-inputtext" />
                 </div>
                 <label for="email">Email</label>
-                <input type="text" name="email" placeholder="Email" style="font-size: 0.8rem"/>
+                <input type="text" id="email" name="Email" placeholder="Email" class="form-inputtext" />
                 <div>
-                    <label for=" mensaje">Mensaje</label>
+                    <label for="mensaje">Mensaje</label>
                 </div>
-                <textarea type="text" name="mensaje" placeholder="Contanos cual es tu duda." style="font-size: 0.8rem;"></textarea>
+                <textarea id="mensaje" name="Mensaje" placeholder="Contanos cuál es tu duda."
+                    class="form-inputtext"></textarea>
                 <div>
-                    <label for=" como">¿Cómo nos conociste?</label>
+                    <label for="comonosconociste">¿Cómo nos conociste?</label>
                 </div>
-                <select name="como">
+                <select id="comonosconociste" name="¿Cómo nos conociste?">
                     <option value="nocontesta">-</option>
                     <option value="cliente">Soy cliente</option>
                     <option value="buscando">Buscando en internet</option>
                     <option value="ig">Publicidad de instagram</option>
                     <option value="otro">Otro</option>
                 </select>
-                <div class="checkboxdiv" style="font-size: 0.8rem;">
+                <div class="checkboxdiv form-inputtext">
                     <input class="checkbox" type="checkbox" name="acepta" value="1" />
-                    Acepto los términos y condiciones
+                    Acepto los términos y condiciones.
                 </div>
-                <div style="text-align: center;margin-top: 1.5em;">
+                <div class="div-buttons">
                     <input class="input2" type="submit" value="Enviar">
                     <input class="input2" type="reset" value="Resetear">
                 </div>
             </form>
         </article>
-        <section style="margin: 4%;">
-            <h2 class="pcontacto2" style="padding-top: 4%;">DATOS DE CONTACTO</h2>
+        <section class="section-contact">
+            <h2 class="pcontacto3">DATOS DE CONTACTO</h2>
             <ul class="flex6">
-                <li style="margin: 2%;">
+                <li class="margincontact">
                     <a class="flex3" href="http://walink.co/55300a">
                         <div>
                             <img class="icon" src="https://cdn.cdnlogo.com/logos/w/29/whatsapp-icon.svg" loading="lazy"
@@ -99,7 +100,7 @@
                         </div>
                     </a>
                 </li>
-                <li style="margin: 2%;">
+                <li class="margincontact">
                     <a class="flex3" href="tel:01142765210">
                         <div>
                             <img class="mailicon" src="https://img.icons8.com/ios-glyphs/30/1A1A1A/phone--v1.png"
@@ -110,7 +111,7 @@
                         </div>
                     </a>
                 </li>
-                <li style="margin: 2%;">
+                <li class="margincontact">
                     <a class="flex3" href="mailto:carinamaffi@yahoo.com.ar">
                         <div>
                             <img class="mailicon" src="https://img.icons8.com/material/24/1A1A1A/mail.png"
@@ -138,8 +139,9 @@
                     xmlns:xlink="http://www.w3.org/1999/xlink">
                     <path
                         d="M19.11 17.205c-.372 0-1.088 1.39-1.518 1.39a.63.63 0 0 1-.315-.1c-.802-.402-1.504-.817-2.163-1.447-.545-.516-1.146-1.29-1.46-1.963a.426.426 0 0 1-.073-.215c0-.33.99-.945.99-1.49 0-.143-.73-2.09-.832-2.335-.143-.372-.214-.487-.6-.487-.187 0-.36-.043-.53-.043-.302 0-.53.115-.746.315-.688.645-1.032 1.318-1.06 2.264v.114c-.015.99.472 1.977 1.017 2.78 1.23 1.82 2.506 3.41 4.554 4.34.616.287 2.035.888 2.722.888.817 0 2.15-.515 2.478-1.318.13-.33.244-.73.244-1.088 0-.058 0-.144-.03-.215-.1-.172-2.434-1.39-2.678-1.39zm-2.908 7.593c-1.747 0-3.48-.53-4.942-1.49L7.793 24.41l1.132-3.337a8.955 8.955 0 0 1-1.72-5.272c0-4.955 4.04-8.995 8.997-8.995S25.2 10.845 25.2 15.8c0 4.958-4.04 8.998-8.998 8.998zm0-19.798c-5.96 0-10.8 4.842-10.8 10.8 0 1.964.53 3.898 1.546 5.574L5 27.176l5.974-1.92a10.807 10.807 0 0 0 16.03-9.455c0-5.958-4.842-10.8-10.802-10.8z"
-                        fill-rule="evenodd"></path></a>
-            </svg>
+                        fill-rule="evenodd"></path>
+                </svg>
+            </a>
         </div>
     </main>
     <footer class="flex">
@@ -166,7 +168,7 @@
                                 loading="lazy" alt="Teléfono">
                         </div>
                         <div class="footertext centradoy">
-                            <p class="footertext" style="margin: 0;">(011) 4276-5210</p>
+                            <p class="footertext nomargin">(011) 4276-5210</p>
                         </div>
                     </a>
                 </li>
@@ -177,16 +179,16 @@
                                 loading="lazy" alt="Email">
                         </div>
                         <div class="footertext centradoy">
-                            <p class="footertext" style="margin: 0;">carinamaffi@yahoo.com.ar</p>
+                            <p class="footertext nomargin">carinamaffi@yahoo.com.ar</p>
                         </div>
                     </a>
                 </li>
             </ul>
         </div>
         <div class="flex2 flexwidth">
-            <h3 class="footertext2" style="padding-left: 1vw;">VISITANOS</h3>
+            <h3 class="footertext3">VISITANOS</h3>
             <a class="flex3" href="https://goo.gl/maps/74q93hd4as3JAkZg8" target="_blank">
-                <div style="height: 100%;">
+                <div class="div-location">
                     <img class="mailicon" src="https://img.icons8.com/material-outlined/24/FFFFFF/marker.png"
                         loading="lazy" alt="Ubicación">
                 </div>
