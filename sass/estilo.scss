@@ -294,7 +294,7 @@ textarea {
 
 .contactotext {
     color: $textoOscuro;
-    font-size: 1.125rem;
+    font-size: 1rem;
 }
 
 .flex {
@@ -374,7 +374,8 @@ textarea {
     flex-wrap: wrap;
 }
 
-.subtitle2 {
+.subtitle2,
+.subtitle3 {
     @extend .title;
     text-align: left;
     padding: 1.5rem 19%;
@@ -443,82 +444,6 @@ textarea {
 .lab {
     width: 30vw;
     height: 30vw;
-}
-
-@media (max-width: 800px) {
-    .galeria {
-        grid-template-columns: 40vw 40vw;
-    }
-
-    .lab {
-        width: 40vw;
-        height: 40vw;
-    }
-
-    .centradoy .video {
-        height: 40.95vw;
-        width: 72.8vw;
-    }
-
-    .footermedia {
-        display: none;
-    }
-
-    .flexwidth,
-    .flexwidth2 {
-        width: 50%;
-    }
-
-    h2 {
-        font-size: 1.2rem;
-    }
-
-    .parrafoserv {
-        font-size: 1rem;
-    }
-
-    .servicios {
-        padding: 2% 1% 1% 1%;
-    }
-
-    .form {
-        margin: 4% 15%;
-        padding: 4%;
-    }
-}
-
-@media (max-width: 600px) {
-    a {
-        font-size: 2vw;
-    }
-
-}
-
-@media (max-width: 480px) {
-    .galeria {
-        grid-template-columns: 70vw;
-    }
-
-    .lab {
-        width: 70vw;
-        height: 70vw;
-    }
-}
-
-@media (min-width: 992px) {
-    header {
-        height: 12vh;
-    }
-}
-
-@media (max-width: 959px) {
-
-    .servicios-icon,
-    .servicios-icon2 {
-        width: 1.7em;
-        height: 1.7em;
-        margin: 0 4em 1em 4em;
-    }
 }
 
 main {
@@ -590,12 +515,6 @@ a:hover {
     margin: 2%;
 }
 
-@media (max-width: 360px) {
-    .logowpp {
-        display: none;
-    }
-}
-
 .title-contact {
     @extend .title;
     padding: 1.5rem 30%;
@@ -604,5 +523,119 @@ a:hover {
 @media (max-width: 999px) {
     .flexwidth2 {
         width: min-content;
+    }
+}
+
+@media (min-width: 992px) {
+    header {
+        height: 12vh;
+    }
+}
+
+@media (max-width: 959px) {
+
+    .servicios-icon,
+    .servicios-icon2 {
+        width: 1.7em;
+        height: 1.7em;
+        margin: 0 6em 1em 6em;
+    }
+}
+
+@media (max-width: 800px) {
+    .galeria {
+        grid-template-columns: 40vw 40vw;
+    }
+
+    .lab {
+        width: 40vw;
+        height: 40vw;
+    }
+
+    .centradoy .video {
+        height: 40.95vw;
+        width: 72.8vw;
+    }
+
+    .footermedia {
+        display: none;
+    }
+
+    .flexwidth,
+    .flexwidth2 {
+        width: 50%;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    .parrafoserv {
+        font-size: 1rem;
+    }
+
+    .servicios {
+        padding: 2% 1% 1% 1%;
+    }
+
+    .form {
+        margin: 4% 15%;
+        padding: 4%;
+    }
+}
+
+@media (max-width: 600px) {
+    a {
+        font-size: 2vw;
+    }
+}
+
+@media (max-width: 480px) {
+    .galeria {
+        grid-template-columns: 70vw;
+    }
+
+    .lab {
+        width: 70vw;
+        height: 70vw;
+    }
+
+    .title-contact {
+        padding: 1.5rem 20%;
+    }
+
+    .pcontacto {
+        margin: 5% 20%;
+    }
+}
+
+@media (max-width: 400px) {
+    .footertext,
+    .footertext2,
+    .footertext3 {
+        font-size: 0.7rem;
+        font-weight: lighter;
+    }
+
+    .flexwidth {
+        width: 40%;
+    }
+
+    .flexwidth2 {
+        width: 60%;
+    }
+}
+
+@media (max-width: 360px) {
+    .logowpp {
+        display: none;
+    }
+
+    .servicios {
+        min-width: 240px;
+    }
+
+    .subtitle3 {
+        padding: 1.5rem 12%;
     }
 }
