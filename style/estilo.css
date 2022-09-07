@@ -306,6 +306,7 @@ textarea {
 .flex, .flex6 {
   display: flex;
   justify-content: space-around;
+  align-items: inherit;
 }
 
 .flex5 {
@@ -516,6 +517,21 @@ a:hover {
 
 .title-contact {
   padding: 1.5rem 30%;
+}
+
+.copyright {
+  text-align: center;
+  border-top: 1px solid rgba(51, 51, 51, 0.3);
+  margin: 0 4%;
+  font-weight: 500;
+  font-size: 0.6rem;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+}
+
+span {
+  font-weight: bold;
 }
 
 @media (max-width: 999px) {
