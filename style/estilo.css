@@ -631,4 +631,13 @@ span {
   .subtitle3 {
     padding: 1.5rem 12%;
   }
+}
+.carrito {
+  width: 1.8em;
+  height: 1.8em;
+}
+
+.shopimg {
+  width: 100px;
+  height: 100px;
 }/*# sourceMappingURL=estilo.css.map */

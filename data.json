@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "name": "Bruma Facial",
+        "price": 1200,
+        "stock": 5,
+        "image": "../images/bruma-facial.png"
+    },
+    {
+        "id": 2,
+        "name": "Colágeno",
+        "price": 2800,
+        "stock": 10,
+        "image": "../images/colageno.png"
+    },
+    {
+        "id": 3,
+        "name": "Crema para estrías y cicatrices",
+        "price": 1800,
+        "stock": 2,
+        "image": "../images/crema-para-estrias-y-cicatrices.png"
+    },
+    {
+        "id": 4,
+        "name": "Emulsión refrescante para piernas",
+        "price": 1500,
+        "stock": 5,
+        "image": "../images/emulsion-refrescante-para-piernas.png"
+    },
+    {
+        "id": 5,
+        "name": "Espuma de limpieza facial",
+        "price": 2000,
+        "stock": 15,
+        "image": "../images/espuma-de-limpieza-facial.png"
+    },
+    {
+        "id": 6,
+        "name": "Tónico astringente",
+        "price": 1300,
+        "stock": 0,
+        "image": "../images/tonico-astringente.png"
+    }
+]
