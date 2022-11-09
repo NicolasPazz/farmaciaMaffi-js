@@ -1,52 +1,53 @@
-let products = [];
-
-fetch('../data.json')
-.then((response) => response.json())
-.then((products) => render(products))
-
+let productsArray = [];
 let clearButton = document.getElementById('boton-vaciar')
 let catalog = document.getElementById('items')
 let cartList = document.getElementById('carrito')
-
 let totalValue = document.getElementById('total')
 let cart = []
 
 clearButton.addEventListener('click', clearCart)
 
+fetch('../data.json')
+    .then((response) => response.json())
+    .then((products) => {
+        render(products)
+        productsArray = products
+    })
+
 loadCartFromStorage()
 renderCart()
 
-function render(products){
+function render(products) {
     products.forEach((product) => {
         let container = document.createElement('div')
         container.classList.add('card', 'col-sm-4', 'm-1')
-    
+
         let cardBody = document.createElement("div")
         cardBody.classList.add('card-body')
-    
+
         let cardImage = document.createElement("img")
         cardImage.setAttribute('src', product.image)
         cardImage.setAttribute('alt', product.name)
         cardImage.classList.add('shopimg', 'mb-2')
-    
+
         let cardTitle = document.createElement("h5")
         cardTitle.classList.add('card-title')
         cardTitle.innerText = product.name
-    
+
         let cardPrice = document.createElement("p")
         cardPrice.classList.add('card-text')
         cardPrice.innerText = `$${product.price}`
-    
+
         let cardStock = document.createElement("p")
         cardStock.classList.add('card-text')
         cardStock.innerText = `Stock: ${product.stock}`
-    
+
         let cardButton = document.createElement("button")
         cardButton.classList.add('btn', 'btn-primary')
         cardButton.innerText = `Agregar al carrito`
         cardButton.setAttribute('mark', product.id)
         cardButton.addEventListener('click', addProductToCart)
-    
+
         cardBody.append(cardImage)
         cardBody.append(cardTitle)
         cardBody.append(cardPrice)
@@ -59,8 +60,7 @@ function render(products){
 
 function addProductToCart(event) {
     let product = event.target.getAttribute('mark')
-    console.log(productsArray)
-    console.log(productsArray[product - 1].stock)
+
     if (productsArray[product - 1].stock > 0) {
         Swal.fire({
             title: `¿Desea agregar este producto al carrito?`,
@@ -73,6 +73,7 @@ function addProductToCart(event) {
             if (result.isConfirmed) {
                 cart.push(product)
                 renderCart()
+                productsArray[product - 1].stock--
             }
         })
     } else {
@@ -89,11 +90,14 @@ function addProductToCart(event) {
 function renderCart() {
     saveCartToStorage()
     cartList.innerHTML = ''
+
     let cartWithoutRepeatedElements = [...new Set(cart)]
+
     cartWithoutRepeatedElements.forEach((itemId) => {
-        let item = products.filter((product) => {
+        let item = productsArray.filter((product) => {
             return product.id === parseInt(itemId)
         })
+
         let quantity = cart.reduce((total, id) => {
             return id === itemId ? total += 1 : total
         }, 0)
@@ -111,6 +115,7 @@ function renderCart() {
         linea.append(clearButton)
         cartList.append(linea)
     })
+
     totalValue.innerText = `$${calculateTotalPrice()}`
 }
 
@@ -128,10 +133,12 @@ function deleteProduct(event) {
                 icon: 'success',
                 title: 'Se ha eliminado el producto',
             })
+
             let id = event.target.dataset.item
             cart = cart.filter((cartId) => {
                 return cartId != id
             })
+
             renderCart()
         }
     })
@@ -161,7 +168,7 @@ function clearCart() {
 
 function calculateTotalPrice() {
     return cart.reduce((total, itemId) => {
-        let item = products.filter((product) => {
+        let item = productsArray.filter((product) => {
             return product.id === parseInt(itemId)
         })
         return total + item[0].price
