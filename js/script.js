@@ -1,21 +1,21 @@
-let productsArray = [];
+let productsArray = []
 let clearButton = document.getElementById('boton-vaciar')
 let catalog = document.getElementById('items')
 let cartList = document.getElementById('carrito')
 let totalValue = document.getElementById('total')
 let cart = []
+let quantityOnCart = []
 
 clearButton.addEventListener('click', clearCart)
 
 fetch('../data.json')
     .then((response) => response.json())
     .then((products) => {
-        render(products)
-        productsArray = products
+        productsArray = products,
+            render(products),
+            loadCartFromStorage(),
+            renderCart()
     })
-
-loadCartFromStorage()
-renderCart()
 
 function render(products) {
     products.forEach((product) => {
@@ -61,7 +61,7 @@ function render(products) {
 function addProductToCart(event) {
     let product = event.target.getAttribute('mark')
 
-    if (productsArray[product - 1].stock > 0) {
+    if (productsArray[product - 1].stock > 0 && productsArray[product - 1].stock != quantityOnCart[product - 1]) {
         Swal.fire({
             title: `¿Desea agregar este producto al carrito?`,
             showDenyButton: true,
@@ -73,7 +73,7 @@ function addProductToCart(event) {
             if (result.isConfirmed) {
                 cart.push(product)
                 renderCart()
-                productsArray[product - 1].stock--
+                productsArray[product - 1].stock
             }
         })
     } else {
@@ -101,6 +101,7 @@ function renderCart() {
         let quantity = cart.reduce((total, id) => {
             return id === itemId ? total += 1 : total
         }, 0)
+        quantityOnCart[itemId - 1] = quantity
 
         let linea = document.createElement('li')
         linea.classList.add('list-group-item', 'text-right', 'mx-2')
